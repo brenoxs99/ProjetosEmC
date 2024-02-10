@@ -1,49 +1,40 @@
 #include <stdio.h>
 
 //Funções
-void Soma(int N_USU)
-{
+void Soma(int N_USU){
 	int N_TAB, RES;
 	
-	for(N_TAB=1; N_TAB <=10; N_TAB++)
-	{
+	for(N_TAB=1; N_TAB <=10; N_TAB++){
 		RES = N_USU + N_TAB;
 		printf("\n\t%d + %d = %d", N_USU, N_TAB, RES);
 	}
 }
 
-void Sub(int N_USU)
-{
+void Sub(int N_USU){
 	int N_TAB, RES;
 	
-	for(N_TAB=1; N_TAB <=10; N_TAB++)
-	{
+	for(N_TAB=1; N_TAB <=10; N_TAB++){
 		RES = N_USU - N_TAB;
 		printf("\n\t%d - %d = %d", N_USU, N_TAB, RES);
 	}
 }
 
-void Mult(int N_USU)
-{
+void Mult(int N_USU){
 	int N_TAB, RES;
 	
-	for(N_TAB=1; N_TAB <=10; N_TAB++)
-	{
+	for(N_TAB=1; N_TAB <=10; N_TAB++){
 		RES = N_USU * N_TAB;
 		printf("\n\t%d * %d = %d", N_USU, N_TAB, RES);
 	}
 }
 
-void Div(int N_USU)
-{
+void Div(int N_USU){
 	int N_TAB;
 	float AUX1, AUX2, RES;
 	
-	for(N_TAB=1; N_TAB <=10; N_TAB++)
-	{
+	for(N_TAB=1; N_TAB <=10; N_TAB++){
 		
-		if(N_USU % N_TAB == 0)
-		{
+		if(N_USU % N_TAB == 0){
 			RES = N_USU / N_TAB;
 			printf("\n\t%d / %d = %.0f", N_USU, N_TAB, RES);
 		}else{
@@ -52,14 +43,11 @@ void Div(int N_USU)
 								//para comparar um inteiro com um decimal.
 			RES= N_USU / AUX1;
 			printf("\n\t%d / %.0f = %.2f", N_USU, AUX1, RES);	
-		}
-		
+		}	
 	}
 }
 
-
-int main()
-{
+int main(){
 	int N_USU, N_TAB, RES, OP;
 	char OPCAO;
 	
@@ -72,8 +60,7 @@ int main()
 		printf("\nDigite o numero aqui: ");
 		scanf("%d", &N_USU);
 	
-		switch(OPCAO)
-		{
+		switch(OPCAO){
 			case '+': printf("\n   Exibindo Tabuada de soma do: %d", N_USU); Soma(N_USU); break;
 			case '-': printf("\n   Exibindo Tabuada de subtracao do: %d", N_USU); Sub(N_USU); break;
 			case '*': printf("\n   Exibindo Tabuada de multiplicacao do: %d", N_USU); Mult(N_USU); break;
@@ -83,8 +70,6 @@ int main()
 		printf("\nDESEJA APRENDER OUTRA TABUADA? (1-SIM ou 2-NAO): ");
 		scanf("%d", &OP);
 	}while(OP < 2);
-	
-	
 	
 	return 0;
 }
