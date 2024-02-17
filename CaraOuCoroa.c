@@ -14,10 +14,6 @@ void GeraResultado(){
 		printf("\tDEU COROA!\n");
 	}
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 void Menu(){
 	int op;
 	
