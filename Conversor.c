@@ -14,20 +14,6 @@ void menu(){
 	printf("\n-------------------------");
 }
 
-void entradaDados(){
-	int opcao;
-	
-	printf("\nDIGITE AQUI: ");
-	scanf("%d", &opcao);
-	
-	switch(opcao){
-		case 1: convMoeda(); break;
-		case 2: break;
-		case 3: break;
-		default: printf("\nOPCAO INVALIDA!");
-	}
-}
-
 void convMoeda(){
 	float moeda, cotacao, res;
 	int opcao;
@@ -41,9 +27,9 @@ void convMoeda(){
 	
 	switch(opcao){
 		case 1: {
-			printf("\nDigite o valor em DOLAR que deseja converter:");
+			printf("\nDigite o valor em DOLAR que deseja converter: ");
 			scanf("%f", &moeda);
-			printf("\nDigite a cotacao atual da moeda selecionada:");
+			printf("\nDigite a cotacao atual da moeda selecionada: ");
 			scanf("%f", &cotacao);
 			
 			res = moeda*cotacao;
@@ -52,9 +38,9 @@ void convMoeda(){
 		}
 		
 		case 2: {
-			printf("\nDigite o valor em EURO que deseja converter:");
+			printf("\nDigite o valor em EURO que deseja converter: ");
 			scanf("%f", &moeda);
-			printf("\nDigite a cotacao atual da moeda selecionada:");
+			printf("\nDigite a cotacao atual da moeda selecionada: ");
 			scanf("%f", &cotacao);
 			
 			res = moeda*cotacao;
@@ -63,17 +49,62 @@ void convMoeda(){
 		}
 		
 		case 3: {
-			printf("\nDigite o valor em DOLAR que deseja converter:");
+			printf("\nDigite o valor em DOLAR que deseja converter: ");
 			scanf("%f", &moeda);
-			printf("\nDigite a cotacao atual da moeda selecionada:");
+			printf("\nDigite a cotacao atual da moeda selecionada: ");
 			scanf("%f", &cotacao);
 			
 			res = moeda*cotacao;
 			printf("\n\t%.2f Dolares(USA) equivalem a %.2f Euros", moeda, res);
 			break;
 		}
+		default: printf("\n\tOPCAO INVALIDA!\n");
 	}
 }
+
+void convTemp() {
+	int opcao=0;
+	float celsius, fahrenheit, res;
+	
+	printf("\nSELECIONE A TEMPERATURA QUE DESEJA CONVERTER: ");
+	printf("\n-------------------------");
+	printf("\n[1]-CELSIUS PARA FAHRENHEIT \n[2]-FAHRENHEIT PARA CELSIUS");
+	printf("\n-------------------------");
+	printf("\nDIGITE AQUI: ");
+	scanf("%d", &opcao);
+	
+	if(opcao == 1){
+		printf("\nDigite a temperatura em celsius: ");
+		scanf("%f", &celsius);
+		
+		fahrenheit = (celsius * 9/5) + 32;
+		printf("\n%.0f graus celcius, equivalem a %.1f graus fahrenheit.", celsius, fahrenheit);
+	}
+	else if(opcao == 2){
+		printf("\nDigite a temperatura em fahrenheit: ");
+		scanf("%f", &fahrenheit);
+		
+		celsius = (fahrenheit - 32)* 5/9;
+		printf("\n%.1f graus fahrenheit, equivalem a %.1f graus celsius.", fahrenheit, celsius);
+	}else{
+		printf("\n\tOPCAO INVALIDA!");
+	}
+}
+
+void entradaDados(){
+	int opcao;
+	
+	printf("\nDIGITE AQUI: ");
+	scanf("%d", &opcao);
+	
+	switch(opcao){
+		case 1: convMoeda(); break;
+		case 2: convTemp(); break;
+		case 3: break;
+		default: printf("\n\tOPCAO INVALIDA!");
+	}
+}
+
 int main(){
 	// CONTINUAR FUNÇÃO 2- CONVERTER TEMPERATURA
 	cabecalho();
