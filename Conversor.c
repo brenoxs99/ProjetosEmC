@@ -106,7 +106,7 @@ void entradaDados(){
 }
 
 int main(){
-	// CONTINUAR FUNÇÃO 2- CONVERTER TEMPERATURA
+	//CONTINUAR FUNÇÃO 3 COVERTER MEDIDAS: Km para Metros, Metros para Centímetros, centímetros para milímetros.
 	cabecalho();
 	menu();
 	entradaDados();
